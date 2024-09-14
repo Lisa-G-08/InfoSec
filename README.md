@@ -6,10 +6,12 @@ their job functions, minimizing the risk of unauthorized modifications or data b
 the database:
 
 1. Administrator
+
 The ultimate authority, with full access to all database tables (Users, Products, Orders, OrderDetails). Administrators can create, view, edit, and delete any record within the system. They are also
 responsible for managing user roles and access permissions. However, the administrator can not create an order as only the customer can place an order.
 
 2. Sales Personnel
+
 Orders table: The sales personnel can view a list of orders, including details such as order ID, date, total amount, and user ID. The sales personnel can also update order table information on the order
 date and total amount. The sales personnel should not update orders and user IDs because they are primary and foreign keys, respectively, and allowing sales personnel to edit these keys directly is
 typically not recommended because it can result in inconsistent data and security flaws. Instead, the database system should automatically maintain the primary and foreign keys, allowing users to edit
@@ -23,6 +25,7 @@ might lead to data consistency and integrity issues.
 Product Table: The sales personnel can view product table details, including product ID, name, stock quantity, description, and price, and don't require product modification capabilities.
 
 3. Inventory Manager:
+
 Product table: The inventory manager can view the list of products, including product ID, quantity, and price. The inventory manager can also update the information in this table. They can input,
 edit, and delete data when necessary. The IDs are generated and are not to be altered by the inventory manager; instead, they can only edit the data they input in the first place.
 
@@ -55,47 +58,34 @@ automatically enter information in the order details table corresponding to any 
 Guide:
 
 Database connection - connection.php
-
 Login - login.php
-
 Register - signUp.php
-
 Logout - Logout.php
-
 Landing page - index.php 
 
 Admin pages:
 
 manage orders table - manage_orders.php
-
 manage order details table - manage_orderdetails
-
 manage users table - manage_users.php
-
 manage products table - manage_product.php
 
 Customer pages:
+
 homepage - Customer-Homepage.php
-
 profile view and edit - Customer-profile.php
-
 order products - Customer-SearchProducts.php
-
 order history - Customer-OrderHistory.php
-
 edit login details - Customer-EditLogin.php
 
 Sales manager pages:
 
 Dashboard - sales_dash.php
-
 managing order and order view tables - orders.php
-
 view product tables - products.php
 
 Inventory pages:
+
 Dashboard - inventory_dash.php
-
 Order and order view tables - inventory_orders.php
-
 managing product tables - inventory_products.php
